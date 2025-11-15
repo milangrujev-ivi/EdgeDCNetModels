@@ -1,7 +1,7 @@
 import keras
 
 def getEdgeDCNet9():
-    model = keras.models.Sequential(name='mili-arch')
+    model = keras.models.Sequential()
     model.add(keras.layers.Input(shape=(160, 160, 3), name='input'))
 
     model.add(keras.layers.Conv2D(3, (3, 3), padding='valid', use_bias=False, strides=(2, 2)))
@@ -72,3 +72,4 @@ def getEdgeDCNet9():
 
     #model.summary()
     return model
+
